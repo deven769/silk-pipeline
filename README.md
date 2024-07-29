@@ -13,3 +13,15 @@
 
 
 ## Tested in Python 3.8.10
+
+
+## Output
+
+1. Os Distribution
+![Os Distribution](output/os_distribution_1.png)
+
+2. Host Age Distribution 
+![Host Age Distribution](output/host_age_distribution_400_days.png)
+
+3. Cloud Provider Distribution
+![Cloud Provider Distribution](output/cloud_provider_distribution_1.png)
