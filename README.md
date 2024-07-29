@@ -4,7 +4,7 @@
 Silk Pipeline is a project designed to fetch host data from Qualys and CrowdStrike, merge it into a single database, and remove duplicates based on hostname, IP address, and other criteria. Currently, only common fields are normalized, but additional fields can be included as needed and usecases.
 
 ## Setup
-1. Ensure Python >= 3.8 is installed.
+1. Ensure Python >= 3.8 is installed. (Tested in 3.8.10)
 2. Install MongoDB and start the MongoDB server.
 3. Install required packages:
 
@@ -13,9 +13,6 @@ Silk Pipeline is a project designed to fetch host data from Qualys and CrowdStri
 1. Navigate to project Dir `silk_pipeline`
 2. pip install -r requirements.txt 
 3. Enter `python main.py`
-
-
-## Tested in Python 3.8.10
 
 
 ## Output
