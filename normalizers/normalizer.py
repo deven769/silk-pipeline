@@ -1,6 +1,6 @@
 from typing import Dict, Any, List
 from datetime import datetime
-import pytz  # Ensure you have pytz installed
+import pytz
 
 class Normalizer:
     @staticmethod
@@ -8,23 +8,17 @@ class Normalizer:
         """Convert various date formats to ISO 8601 format with UTC timezone."""
         if isinstance(date_value, str):
             try:
-                # Handle ISO 8601 format with or without 'Z' at the end
                 date_value = datetime.fromisoformat(date_value.rstrip('Z')).replace(tzinfo=pytz.UTC)
             except ValueError:
                 try:
-                    # Handle common formats that may not be ISO 8601
                     date_value = datetime.strptime(date_value, '%Y-%m-%d %H:%M:%S').replace(tzinfo=pytz.UTC)
                 except ValueError:
                     print(f"Invalid date format: {date_value}")
                     return date_value
         elif isinstance(date_value, datetime):
-            # Directly convert datetime to ISO 8601 format
             return date_value.astimezone(pytz.UTC).isoformat()
         elif isinstance(date_value, (int, float)):
-            # Handle timestamps (assumed to be in seconds since epoch)
             return datetime.fromtimestamp(date_value, pytz.UTC).isoformat()
-        
-        # Ensure all dates are converted to UTC and then to ISO 8601 format
         return date_value.astimezone(pytz.UTC).isoformat() + 'Z'
 
     @staticmethod

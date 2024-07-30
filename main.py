@@ -41,6 +41,7 @@ async def main(
     normalizer = Normalizer()
     normalized_qualys_hosts: List[Dict[str, Any]] = normalizer.normalize_hosts(qualys_hosts, "qualys")
     normalized_crowdstrike_hosts: List[Dict[str, Any]] = normalizer.normalize_hosts(crowdstrike_hosts, "crowdstrike")
+    # import pdb; pdb.set_trace();
 
     # Deduplicate and merge hosts
     deduplicator = Deduplicator(db_url, db)
@@ -53,6 +54,7 @@ async def main(
     os_distribution = deduplicator.get_os_distribution()
     host_age_distribution = deduplicator.get_host_age_distribution()
     cloud_provider_distribution = deduplicator.get_cloud_provider_distribution()
+    # import pdb; pdb.set_trace();
 
     visualizer.visualize_os_distribution(os_distribution)
     visualizer.visualize_host_age_distribution(host_age_distribution)
@@ -65,6 +67,7 @@ if __name__ == "__main__":
         "data from Qualys and CrowdStrike, merge it into a single "
         "database, and remove duplicates based on hostname, IP address, "
         "and other criteria. Currently, only common fields are normalized, but additional fields can be included based on use case.\n"
+        "There is also backup_normalizer.py which normalize more fields but I havent used that in this project."
         "-----------------------------------------------------------------------------------\n"
     )
 
