@@ -64,13 +64,13 @@ if __name__ == "__main__":
         "Silk Pipeline is a project designed to fetch host "
         "data from Qualys and CrowdStrike, merge it into a single "
         "database, and remove duplicates based on hostname, IP address, "
-        "and other criteria. Currently, only common fields are normalized, but additional fields can be included as needed.\n"
+        "and other criteria. Currently, only common fields are normalized, but additional fields can be included based on use case.\n"
         "-----------------------------------------------------------------------------------\n"
     )
 
     kwargs = {
         "skip": 1,
-        "limit": 1,
+        "limit": 2,
         "db_url": "mongodb://127.0.0.1:27017/",
         "db": "silk_db",
         "api_key": "armis-login@armis.com_60974105-5053-4267-b16e-392e8165c89a",

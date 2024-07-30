@@ -1,7 +1,7 @@
 # Silk Data Pipeline
 
 ## Overview
-Silk Pipeline is a project designed to fetch host data from Qualys and CrowdStrike, merge it into a single database, and remove duplicates based on hostname, IP address, and other criteria. Currently, only common fields are normalized, but additional fields can be included as needed and usecases.
+Silk Pipeline is a project designed to fetch host data from Qualys and CrowdStrike, merge it into a single database, and remove duplicates based on hostname, IP address, and other criteria. Currently, only common fields are normalized, but additional fields can be included as needed and and based on usecases.
 
 ## Setup
 1. Ensure Python >= 3.8 is installed. (Tested in 3.8.10)
