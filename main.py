@@ -81,4 +81,4 @@ if __name__ == "__main__":
     
     asyncio.run(main(**kwargs))
 
-    print('View output in the output directory')
+    print('View output in the output directory, os_distribution.png and host_age_distribution.png.')
